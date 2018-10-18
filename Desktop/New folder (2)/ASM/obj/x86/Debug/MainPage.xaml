@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="ASM.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <NavigationView x:ConnectionId='2' Header="Hello. Have a nice day!!!" x:Name="NavView"                                            >
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox QueryIcon="Find"/>
+        </NavigationView.AutoSuggestBox>
+        <NavigationView.MenuItems>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItemHeader Content="MENU"/>
+            <NavigationViewItem x:Uid="SigninItem" Icon="AddFriend" Content="sign up" Tag="sign_up" />
+            <NavigationViewItem x:Uid="SignUpItem" Icon="ContactPresence" Content="Sign in" Tag="sign_in"/>
+            <NavigationViewItem x:Uid="InfoItem" Icon="ContactInfo" Content="ContactInfo" Tag="Contact_Info"/>
+            <NavigationViewItem x:Uid="MusicNavItem" Icon="Audio" Content="Music" Tag="Music"/>   
+            
+        </NavigationView.MenuItems>
+        <Frame x:ConnectionId='3' x:Name="ContentFrane" Margin="150,0,150,30">
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition/>
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+    </NavigationView>
+   
+</Page>
+
