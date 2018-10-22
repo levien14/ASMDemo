@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="ASM.Views.CreateSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+               
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:ConnectionId='5' x:Name="NameSong" Header="Name" Grid.Column="0" Grid.Row="0" Margin="10"/>
+            <TextBox x:ConnectionId='6' x:Name="Description" Header="Description" Grid.Column="1" Grid.Row="0" Margin="10"/>
+            <TextBox x:ConnectionId='7' x:Name="Singer" Header="Singer" Grid.Column="0" Grid.Row="1" Margin="10"/>
+            <TextBox x:ConnectionId='8' x:Name="Author" Header="author" Grid.Column="1" Grid.Row="1" Margin="10"/>
+        </Grid>
+        <TextBox x:ConnectionId='2' x:Name="Thumbnail" Header="Thumbnail" Margin="10"/>
+        <TextBox x:ConnectionId='3' x:Name="Link" Header="Link MP3" Margin="10"/>
+        <Button x:ConnectionId='4' Content="Create Song" HorizontalAlignment="Center" Margin="20"                    />
+    </StackPanel>
+</Page>
+

@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="ASM.Views.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel x:Name="forRegister2" Margin="20,50,20,0" Visibility="Collapsed">
+            <SymbolIcon Symbol="Accept" Margin="10"/>
+            <TextBlock Text="Congratulations on registering successfully !!!" TextAlignment="Center" Foreground="Blue" Style="{ThemeResource BodyTextBlockStyle}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Would you like to log in now?" TextAlignment="Center" Grid.Column="0" Margin="10,8,0,0"/>
+                <RadioButton Style="{ThemeResource TextBlockButtonStyle}" Content="SignIn" Grid.Column ="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Click="Do_SignIn"/>
+
+            </Grid>
+
+        </StackPanel>
+
+        <ScrollViewer x:Name="formRegister">
+
+            <StackPanel Margin="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="rFirstName" Header="Fist Name" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0"/>
+                    <TextBox x:Name="rLastName" Header="Last Name" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="firstName" Visibility="Collapsed" Grid.Row="1" Grid.Column="0" Foreground="Red"/>
+                    <TextBlock x:Name="lastName" Visibility="Collapsed" Grid.Row="1" Grid.Column="1" Foreground="Red"/>
+                </Grid>
+                <TextBox x:Name="rEmail" Header="Email"/>
+                <TextBlock x:Name="email" Visibility="Collapsed" Foreground="Red"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <PasswordBox x:Name="rPassword" Header="PassWord" Grid.Column="0" Grid.Row="0" Margin="0,0,5,0"/>
+                    <TextBlock x:Name="password" Visibility="Collapsed" Foreground="Red"/>
+                    <PasswordBox x:Name="Confirmpass" Header="Confirm password" Grid.Column="1" Grid.Row="0" Margin="5,0,0,0" />
+                    <TextBlock x:Name="vPass" Visibility="Collapsed" Foreground="Red"/>
+                </Grid>
+
+                <TextBox x:Name="rAvatar" Header="Avatar"/>
+                <Grid Margin="0,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="rImage" Width="150" Height="150" Grid.Column="0"/>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}"  Margin="20" Grid.Row="1" Click="Capture" Grid.Column="1">
+                        <SymbolIcon Symbol="Camera" />
+                    </Button>
+                    <Button Content="Picture" Grid.Column="1" Margin="60" Click="Capture"/>
+
+                </Grid>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <CalendarDatePicker x:Name="rBirthday" Header="Birthday" DateChanged="Do_Dateirthday" Grid.Column="0"/>
+                    <TextBox x:Name="rPhone" Header="PhoneNumber" Grid.Column="1"/>
+                    <TextBlock x:Name="phone" Visibility="Collapsed" Foreground="Red" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="20,5,0,0" >
+                    <RadioButton Content="Male" Tag="1" Checked="Do_CheckGender"/>
+                    <RadioButton Content="Feale" Tag="2" Margin="15,0,0,0" Checked="Do_CheckGender" />
+                    <RadioButton Content="Other" Tag="0" Margin="15,0,0,0" Checked="Do_CheckGender" IsChecked="True"/>
+                </StackPanel>
+                <TextBox x:Name="rAddress" Header="Address" Height="80"/>
+                <TextBlock x:Name="address" Visibility="Collapsed" Foreground="Red"/>
+                <TextBox x:Name="rIntro" Header="Introduction" Height="80"/>
+                <TextBlock x:Name="introduction" Visibility="Collapsed" Foreground="Red"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Register" HorizontalAlignment="Center" Margin="10" Click="Do_Register"/>
+                    <Button Content="Reset" HorizontalAlignment="Center" Margin="10" Click="Do_Reset"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="ASM.Views.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel x:Name="logout" Visibility="Collapsed">
+            <SymbolIcon Symbol="Accept" VerticalAlignment="Center" Margin="0,100,0,0"/>
+            <TextBlock Text="Successful login" HorizontalAlignment="Center" Margin="0,15" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Content="Music" Margin="20" Click="Go_Music"/>
+                <Button Content="Upload Music" Margin="20" Click="Go_UploadMusic"/>
+                <Button Content="Load Information" Margin="20" Click="Go_LoadInfor"/>
+                <Button Content="Logout" Click="Button_Click" Margin="20"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel x:Name="login" Visibility="Visible">
+            <TextBlock HorizontalAlignment="Center" Margin="0,100,0,0"> <Bold>Login Now</Bold></TextBlock>
+            <TextBlock Text="______________________________________________" TextAlignment="Center"/>
+            <StackPanel Margin="20,50,20,0">
+                <TextBox x:Name="lEmail" BorderThickness="0,0,0,1.5" BorderBrush="AliceBlue" PlaceholderText="Email" Margin="0,0,0,10"/>
+                <PasswordBox x:Name="lPassword" BorderThickness="0,0,0,1.5" BorderBrush="AliceBlue" PlaceholderText="Password"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="If you do not have the funds please register" Margin="20,15,0,0" Style="{ThemeResource BodyTextBlockStyle}"/>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}" Click="Go_Rigister">
+                        <TextBlock Text="SignUp" Margin="30,10,0,0"/>
+                    </Button>
+                </StackPanel>
+                <TextBlock x:Name="ValidateError" Visibility="Visible" Foreground="Red"/>
+                <Button Content="LogIn" HorizontalAlignment="Center" Margin="10" Click="Do_login" BorderBrush="AliceBlue" Background="AntiqueWhite" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
