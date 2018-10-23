@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="DemmoAppBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DemmoAppBar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel Margin="0,20,0,0">
+           
+            <AppBar IsOpen="True">
+                <AppBarButton Label="View Gallery" HorizontalAlignment="Right" Click="GO_Photo">
+                    <SymbolIcon Symbol="BrowsePhotos"/>
+                </AppBarButton>
+                
+            </AppBar>
+            <TextBlock Text="Demo AppBar" Margin="100" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </StackPanel>
+    </Grid>
+</Page>

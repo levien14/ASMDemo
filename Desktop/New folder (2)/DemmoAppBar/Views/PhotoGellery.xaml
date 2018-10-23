@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="DemmoAppBar.Views.PhotoGellery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DemmoAppBar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <RadioButton Style="{ThemeResource TextBlockButtonStyle}">
+                    <SymbolIcon  Symbol="Back"/>
+                </RadioButton>
+                <Button Content="Get photo" Margin="100,100,0,0" Click="ChooseImage"/>
+                <TextBlock Text="summer" Margin="100,0,0,0"/>
+
+                <ListView ItemsSource="{x:Bind listPhoto}">
+                    <!--<Grid Margin="100,30,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>-->
+                    
+                </ListView>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
